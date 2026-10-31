@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Dough Calculator
+Comment=Pizza dough ingredient weights by size, count and thickness
+Exec=dough-calculator
+Icon=dough-calculator
+Terminal=false
+Categories=Utility;
+Keywords=pizza;dough;recipe;baking;
+StartupWMClass=Tk

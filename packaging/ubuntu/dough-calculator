@@ -1,0 +1,8 @@
+#!/bin/sh
+# Launch Dough Calculator with a Python 3 that has Tkinter (python3-tk).
+APP=/usr/share/dough-calculator/dough_calculator.py
+for py in python3 /usr/bin/python3 /usr/bin/python3.[0-9]*; do
+    command -v "$py" >/dev/null 2>&1 || continue
+    "$py" -c "import tkinter" >/dev/null 2>&1 && exec "$py" "$APP" "$@"
+done
+exec python3 "$APP" "$@"

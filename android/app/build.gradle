@@ -1,0 +1,32 @@
+plugins { id "com.android.application" }
+
+android {
+    namespace "com.doughcalculator.app"
+    compileSdk 35
+    defaultConfig {
+        applicationId "com.doughcalculator.app"
+        minSdk 26
+        targetSdk 35
+        versionCode 6
+        versionName "6.0"
+    }
+    signingConfigs {
+        release {
+            storeFile file("../dough-release.jks")
+            storePassword System.getenv("DOUGH_KS_PASS") ?: "doughcalc"
+            keyAlias "dough"
+            keyPassword System.getenv("DOUGH_KS_PASS") ?: "doughcalc"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+    sourceSets { main { assets.srcDirs = ["src/main/assets", "../../web"] } }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}

@@ -1,0 +1,17 @@
+# Android signing key — never commit (back it up privately)
+*.jks
+*.keystore
+keystore.properties
+
+# Build outputs
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+dist/
+*.apk
+*.deb
+__pycache__/
+*.pyc
+.idea/
+*.iml
