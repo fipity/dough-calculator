@@ -12,7 +12,7 @@ Download `DoughCalculator.exe` from the [Releases](../../releases) page and doub
 If SmartScreen says "Windows protected your PC", choose **More info → Run anyway** (the exe isn't code-signed).
 The exe is built automatically by GitHub Actions (`.github/workflows/windows-exe.yml`) whenever a release is published.
 
-## Pixel 9a (Android)
+## Android only tested on (Pixel 9a) 
 1. Download `DoughCalculator-6.0.apk` from the [Releases](../../releases) page and copy it to the phone (Drive, USB, email…), or `adb install DoughCalculator-6.0.apk`.
 2. Tap it in Files. When prompted, allow "Install unknown apps" for that app.
 3. If Play Protect warns about an unknown developer, choose **More details → Install anyway**.
