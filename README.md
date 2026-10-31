@@ -1,4 +1,7 @@
-# Dough Calculator v6 — Ubuntu + Android
+# Dough Calculator 
+To calculate pizza dough and recipe
+
+##**Install**
 
 ## Ubuntu (22.04 / 24.04 or newer)
 Download `dough-calculator_6.0_all.deb` from the [Releases](../../releases) page, then:
