@@ -7,6 +7,11 @@ Then open **Dough Calculator** from the app menu, or run `dough-calculator`.
 Command-line mode: `dough-calculator --cli --size 14 --count 4 --thickness thin [--gf]`
 Remove: `sudo apt remove dough-calculator`
 
+## Windows 10 / 11
+Download `DoughCalculator.exe` from the [Releases](../../releases) page and double-click it — no install or Python needed.
+If SmartScreen says "Windows protected your PC", choose **More info → Run anyway** (the exe isn't code-signed).
+The exe is built automatically by GitHub Actions (`.github/workflows/windows-exe.yml`) whenever a release is published.
+
 ## Pixel 9a (Android)
 1. Download `DoughCalculator-6.0.apk` from the [Releases](../../releases) page and copy it to the phone (Drive, USB, email…), or `adb install DoughCalculator-6.0.apk`.
 2. Tap it in Files. When prompted, allow "Install unknown apps" for that app.

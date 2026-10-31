@@ -1,0 +1,40 @@
+name: Windows .exe
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install PyInstaller
+        run: pip install pyinstaller==6.11.1 pillow
+
+      - name: Build DoughCalculator.exe
+        run: >
+          pyinstaller --onefile --windowed
+          --name DoughCalculator
+          --icon assets/icon-256.png
+          src/dough_calculator.py
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: DoughCalculator-windows
+          path: dist/DoughCalculator.exe
+
+      - name: Attach to release
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "${{ github.event.release.tag_name }}" dist/DoughCalculator.exe --clobber
