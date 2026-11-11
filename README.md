@@ -1,6 +1,8 @@
 # Dough Calculator 
 To calculate pizza dough and recipe
 
+![Dough Calculator on Ubuntu: size, count and thickness settings, ingredient weights with baker's percentages, and the dough instructions](docs/images/desktop.png)
+
 ## **Install**
 
 ## Ubuntu (22.04 / 24.04 or newer)
@@ -20,6 +22,11 @@ The exe is built automatically by GitHub Actions (`.github/workflows/windows-exe
 2. Tap it in Files. When prompted, allow "Install unknown apps" for that app.
 3. If Play Protect warns about an unknown developer, choose **More details → Install anyway**.
 Works fully offline. "Share / save" opens the Android share sheet (Drive, Files, Messages, Keep…).
+
+<p>
+  <img src="docs/images/phone.png" width="300" alt="The phone app: pizza size, number of pizzas, thickness and the gluten-free switch">
+  <img src="docs/images/phone-gf.png" width="300" alt="Gluten-free results on the phone: dough ball, flour and water weights and the ingredient table">
+</p>
 
 ## Layout
 - `src/dough_calculator.py` – Python/Tkinter source (rebuilt from the .exe; bytecode-identical)
